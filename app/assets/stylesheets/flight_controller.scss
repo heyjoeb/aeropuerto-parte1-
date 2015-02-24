@@ -1,0 +1,11 @@
+// Place all the styles related to the flight_controller controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+.airport h1 {
+	color: #fff
+}
+.airport th {
+	text-align: center
+}

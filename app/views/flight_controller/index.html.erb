@@ -1,0 +1,61 @@
+<nav class="navbar navbar-inverse navbar-static-top airport">
+      <div class="container">
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><h1>Airport-1</h1></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<div class="container airport">
+  <div class="row">
+
+    <div class="col-md-6">
+      <table class="table table-bordered table-striped">
+      <h2>Departures</h2>
+        <tr>
+          <th>airline</th>
+          <th>number</th>
+          <th>date</th>
+          <th>status</th>
+        </tr>
+        <% @flights.each do |a| %>
+          <tr>
+            <td><%= a.airline.name %></td>
+            <td><%= a.number %></td>
+            <td><%= a.departure.date %></td>
+            <td><%= a.departure.status %></td>
+          </tr>
+        <% end %>
+
+      </table>
+    </div>
+
+
+    <div class="col-md-6">
+      <table class="table table-bordered table-striped">
+      <h2>Arrivals</h2>
+        <tr>
+          <th>airline</th>
+          <th>number</th>
+          <th>date</th>
+          <th>status</th>
+        </tr>
+        <% @flights.each do |a| %>
+          <tr>
+            <td><%= a.airline.name %></td>
+            <td><%= a.number %></td>
+            <td><%= a.arrival.date %></td>
+            <td><%= a.arrival.status %></td>
+          </tr>
+        <% end %>
+
+      </table>
+    </div>
+
+    
+
+  </div>
+</div>
+
